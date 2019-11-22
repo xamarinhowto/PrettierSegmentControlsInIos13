@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PrettierSegmentControlsInIos13.Views.SegmentControlPage"
+    xmlns:vm="clr-namespace:PrettierSegmentControlsInIos13.ViewModels"
+    xmlns:controls="clr-namespace:PrettierSegmentControlsInIos13.Controls"
+    xmlns:segmented="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+    Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:SegmentControlViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout
+            Orientation="Vertical"
+            CompressedLayout.IsHeadless="True"
+            Padding="16"
+            Spacing="16">
+            <Label
+                Text="Prettier Segment Controls in iOS 13"
+                HorizontalTextAlignment="Center"
+                TextColor="{StaticResource PrimaryBrandColor}"
+                VerticalOptions="Center" />
+            <controls:CustomSegmentedControl
+                TintColor="{Binding SegmentTintColor}"
+                BackgroundColor="{Binding SegmentBackgroundColor}"
+                SelectedTextColor="{Binding SegmentTextColor}"
+                Margin="0">
+                <segmented:SegmentedControl.Children>
+                    <segmented:SegmentedControlOption
+                        Text="Option 1" />
+                    <segmented:SegmentedControlOption
+                        Text="Option 2" />
+                    <segmented:SegmentedControlOption
+                        Text="Option 3" />
+                </segmented:SegmentedControl.Children>
+            </controls:CustomSegmentedControl>
+
+            <Label
+                Text="Tint Color"
+                TextColor="{StaticResource PrimaryBrandColor}" />
+            <StackLayout
+                Orientation="Horizontal">
+                <BoxView
+                    BackgroundColor="#0456A2">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding SetTintColorCommand}"
+                            CommandParameter="#0456A2" />
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+                <BoxView
+                    BackgroundColor="#2E97BD">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding SetTintColorCommand}"
+                            CommandParameter="#2E97BD" />
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+                <BoxView
+                    BackgroundColor="#B1CC67">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding SetTintColorCommand}"
+                            CommandParameter="#B1CC67" />
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+                <BoxView
+                    BackgroundColor="#FF9900">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding SetTintColorCommand}"
+                            CommandParameter="#FF9900" />
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+                <BoxView
+                    BackgroundColor="#C93A41">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding SetTintColorCommand}"
+                            CommandParameter="#C93A41" />
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+            </StackLayout>
+            <Label
+                Text="Background Color"
+                TextColor="{StaticResource PrimaryBrandColor}" />
+            <StackLayout
+                Orientation="Horizontal">
+                <BoxView
+                    BackgroundColor="#553678B5">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding SetBackgroundColorCommand}"
+                            CommandParameter="#553678B5" />
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+                <BoxView
+                    BackgroundColor="#5558ACCA">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding SetBackgroundColorCommand}"
+                            CommandParameter="#5558ACCA" />
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+                <BoxView
+                    BackgroundColor="#55C1D685">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding SetBackgroundColorCommand}"
+                            CommandParameter="#55C1D685" />
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+                <BoxView
+                    BackgroundColor="#55FFAD33">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding SetBackgroundColorCommand}"
+                            CommandParameter="#55FFAD33" />
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+                <BoxView
+                    BackgroundColor="#55D46167">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding SetBackgroundColorCommand}"
+                            CommandParameter="#55D46167" />
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+            </StackLayout>
+            <Label
+                Text="Text Color"
+                TextColor="{StaticResource PrimaryBrandColor}" />
+            <StackLayout
+                Orientation="Horizontal">
+                <BoxView
+                    BackgroundColor="#6A6C6E">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding SetTextColorCommand}"
+                            CommandParameter="#6A6C6E" />
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+                <BoxView
+                    BackgroundColor="#808183">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding SetTextColorCommand}"
+                            CommandParameter="#808183" />
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+                <BoxView
+                    BackgroundColor="#A6A8AA">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding SetTextColorCommand}"
+                            CommandParameter="#A6A8AA" />
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+                <BoxView
+                    BackgroundColor="#BBBCBF">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding SetTextColorCommand}"
+                            CommandParameter="#BBBCBF" />
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+                <BoxView
+                    BackgroundColor="#F1F1F2">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding SetTextColorCommand}"
+                            CommandParameter="#F1F1F2" />
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
